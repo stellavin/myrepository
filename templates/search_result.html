@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Open Sections</title>
+</head>
+
+<body>
+<p>You searched for open sections of: <strong>{{ query }}</strong></p>
+		{% if sections %}
+<p>Found {{ sections|length }} section{{ sections|pluralize }}.</p>
+<ul>
+{% for section in sections %}
+<li>{{ section.snum}}</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No open sections found.</p>
+{% endif %}
+</body>
+</html>
